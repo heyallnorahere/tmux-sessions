@@ -20,11 +20,7 @@ tmux select-pane -t 0
 echo "layout set" > ~/.layout
 
 sleep 0.2
-
-fastfetch --logo-type kitty-icat
-
-# run the damn shell
-$SHELL
+"$DIR/shell.zsh"
 
 # kill the session when this shell exits
 tmux kill-session
