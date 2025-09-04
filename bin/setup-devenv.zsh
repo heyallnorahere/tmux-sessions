@@ -2,6 +2,9 @@
 
 DIR=$(realpath $(dirname $0))
 
+tmux bind-key v select-pane -t 2
+tmux bind-key a select-pane -t 0
+
 # cmatrix
 tmux split-window -v "$DIR/cmatrix.zsh"
 
