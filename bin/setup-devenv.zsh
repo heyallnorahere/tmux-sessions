@@ -21,9 +21,9 @@ echo "layout set" > ~/.layout
 
 sleep 0.2
 
+fastfetch --logo-type kitty-icat
+
 # run the damn shell
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 $SHELL
 
 # kill the session when this shell exits
