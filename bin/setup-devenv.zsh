@@ -2,14 +2,14 @@
 
 DIR=$(realpath $(dirname $0))
 
-tmux bind-key v select-pane -t 2
-tmux bind-key a select-pane -t 0
+tmux bind-key v select-pane -t 0
+tmux bind-key a select-pane -t 2
 
 # cmatrix
 tmux split-window -v "$DIR/cmatrix.zsh"
 
-# nvim
-tmux split-window -v nvim
+# shell
+tmux split-window -v "$DIR/shell.zsh"
 
 # cava
 tmux split-window -v "$DIR/cava.zsh"
@@ -23,7 +23,7 @@ tmux select-pane -t 0
 echo "layout set" > ~/.layout
 
 sleep 0.2
-"$DIR/shell.zsh"
+nvim
 
 # kill the session when this shell exits
 tmux kill-session
